@@ -77,9 +77,68 @@ $(function() {
         }
     }, 5000)
 
+
     $(window).scroll(function () {
-        $(this).scrollTop() > 120 ? $("#down").css("opacity", "0") :  $("#down").css("opacity", "1") 
+        $(window).width() < 995 ? ($(".desktop").css("opacity", "0"), $(".tablet").css("opacity", "1")) : ($(".desktop").css("opacity", "1"), $(".tablet").css("opacity", "0"))
+        $(this).scrollTop() > 120 ? $("#down").css("opacity", "0") : $("#down").css("opacity", "1")
     })
+
+    //menu
+    let menuIsOpen = false
+    $('#menu').on('click', function(){
+        menuIsOpen ? 
+        ($(".nav-open-img").css("opacity", "1"),
+        $(".nav-close-img").css("opacity", "0"),
+        $(".nav-overlay").css({"opacity": "0", "display": "none", "transform": "translate3d(0px, 90%, 0px)"}),
+        menuIsOpen = false) : 
+        ($(".nav-open-img").css("opacity", "0"),
+        $(".nav-close-img").css({"opacity": "1", "z-index": "999"}),
+        $(".nav-overlay").css({"opacity": "1", "display": "flex", "transform": "translate3d(0px, 100%, 0px)","transform-style": "preserve-3d"}),
+        menuIsOpen = true)
+
+    });
+
+    //header
+    let didScroll,
+        lastScrollTop = 0,
+        delta =  10,
+        navbarHeight = $("header").outerHeight()
+
+    $(window).scroll(function(event){
+        didScroll = true;
+    }); 
+
+    setInterval(function() {
+        if (didScroll) {
+            hasScrolled();
+            didScroll = false;
+        }
+    }, 250);
+
+    function hasScrolled() {
+        let st = $(this).scrollTop();
+        if(Math.abs(lastScrollTop - st) <= delta)
+            return;
+
+        if (st > lastScrollTop && st > navbarHeight){
+            // Scroll Down
+            $('header').removeClass('nav-down').addClass('nav-up');
+        } else {
+            // Scroll Up
+            if(st + $(window).height() < $(document).height()) {
+                $('header').removeClass('nav-up').addClass('nav-down');
+            }
+        }
+        
+        lastScrollTop = st;
+    }
+
+
+
+    
+
+    
+
     
 
     

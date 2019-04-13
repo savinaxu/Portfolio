@@ -120,6 +120,9 @@ header {
     top: 0;
     z-index: 99;
     color: #fff;
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 0, rgba(255, 255, 255, 0) 100%);
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0, rgba(255, 255, 255, 0) 100%);
 }
 
 .head-bg {
@@ -476,4 +479,59 @@ header {
     #ketogether #project-snapshot .col-3 {
         display: none;
     }
+}
+
+/* aplus */
+#aplus #project-snapshot {
+    background-image: url("../img/aplus/hero.png")
+}
+
+#aplus #project-snapshot .container-content {
+    padding-top: 200px;
+}
+
+#aplus .row .col-3 {
+    padding-top: 10px;
+    margin-left: 8%;
+    color: white;
+    background: -moz-linear-gradient(left, rgba(255,0,102,1) 0%, rgba(255,0,102,0.64) 100%);
+    background:  -webkit-linear-gradient(left, rgba(255,0,102,1) 0%, rgba(255,0,102,0.64) 100%);
+    background: linear-gradient(to right, rgba(255,0,102,1) 0%, rgba(255,0,102,0.64) 100%);
+}
+
+#aplus #project-snapshot .title {
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+#aplus .eyebrow {
+    color: #ff0066;
+}
+
+#aplus #project-snapshot .eyebrow {
+    color: white;
+    padding-top: 10px;
+}
+
+#aplus .intro-text {
+    font-size: 20px;
+}
+
+#aplus .button-link {
+    color: #ff0066;
+    letter-spacing: 2px;
+    padding: 20px 30px 20px 30px;
+    border: 2px solid #ff0066;
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+#aplus .button-link:hover {
+    border: 2px solid white;
+    background: white;
+    cursor: hand;
+    color: #ff0066;
 }

@@ -71,10 +71,11 @@
 
     <!-- fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700" rel="stylesheet">
 
     <!-- style -->
     <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -99,29 +100,29 @@
     <div id="fadeIn"></div>
 
     <!-- header -->
-    <header>
+    <header class="nav-down">
         <div id="header">
             <div id="logo">
-                <a href="index.html">
-                    <img src="assets/img/sLogo.png" alt="logo">
-                </a>
+                <a href="/"></a>
+                <img src="assets/img/sLogo.png" alt="logo">
             </div>
-            <nav>
-                <ul id="menu">
-                    <a href="#">
-                        <li id="link_home">Home</li>
-                    </a>
-                    <a href="#projects">
-                        <li id="link_projects">Projects</li>
-                    </a>
-                    <a href="">
-                        <li id="link_contact">
-                            Contact
-                            <img src="assets/img/talk.svg" alt="contact">
-                        </li>
-                    </a>
-                </ul>
+            <nav id="menu">
+                <div class="nav-open-close">
+                    <img class="nav-open-img" src="assets/img/nav-open.svg" alt="menu">
+                    <img class="nav-close-img" src="assets/img/nav-close.svg" alt="menu">
+                </div>
             </nav>
+            <div id="nav" class="nav-overlay">
+                <ul class="nav-overlay-container">
+                    <li id="link_home"><a href="/">Home</a></li>
+                    <li id="link_projects"> <a href="#projects">Projects</a></li>
+                    <li id="link_contact"><a class="last" href="/">Contact</a></li>
+                    <li><a href="https://www.linkedin.com/in/savina-xu-2951bb137/" class="sm">LinkedIn</a></li>
+                    <li><a href="https://github.com/savinaxu" class="sm">GitHub</a></li>
+                    <li><a href="https://www.facebook.com/profile.php?id=1243005372" class="sm">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/supa.savina/" class="sm">Instagram</a></li>
+                </ul>
+            </div>
         </div>
     </header>
 
@@ -145,7 +146,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="intro-right">
+                <div class="intro-right fadeInDown">
                     <a class="box__item">
                         <div class="box">
                             <div class="box__shadow"></div>
@@ -171,94 +172,127 @@
         <!-- project -->
         <section id="projects">
             <div id="ux" class="section browser hero">
-                <div class="s-container">
-                    <div class="row-split lg roles">
-                        <div class="left ux-intro col-split roles padding">
-                            <div class="left-container">
-                                <h2>
-                                    UX / UI <br>
-                                    Design<br>
-                                </h2>
-                                <p>babababa</p>
-                                <p>
-                                    <span class="desktop">👉</span>
-                                    <span class="tablet">👇</span>
-                                </p>
+                <div class="s-container" data-aos="fade-up" data-aos-mirror="true" data-aos-easing="ease-in-out"">
+                    <div class=" row-split lg roles">
+                    <div class="left ux-intro col-split roles padding" data-aos="fade-up"">
+                        <div class="left-container">
+                            <h2>
+                                UX/UI Design<br>
+                                Projects<br>
+                            </h2>
+                            <p>Creating meaningful experiences through problem-solving for users.
+                                Focusing on trying to make an impact in the lives of others through design.</p>
+                            <p>
+                                My UX/UI Case Study
+                                <span class="desktop">👉</span>
+                                <span class="tablet">👇</span>
+                            </p>
 
+                        </div>
+                    </div>
+                    <div class="right p-intro col-split roles padding vertical last" data-aos="fade-up"
+                        data-aos-easing="ease" data-aso=offset="300" data-aos-duration="800" data-aos-mirror="true">
+                        <a class="card cta ketogether" href="ketogether.html">
+                            <div class="card-up">
+                                <div class="card-link-heading">
+                                    <h3 class="clh">Ketogether</h3>
+                                    <p class="clp">A platform for ketogenic diet users to share, to explore and to stick
+                                        to the
+                                        diet!</p>
+                                </div>
+                                <div class="tags">
+                                    <div class="tag">
+                                        <p>Research</p>
+                                    </div>
+                                    <div class="tag">
+                                        <p>Analysis</p>
+                                    </div>
+                                    <div class="tag">
+                                        <p>Wireframe</p>
+                                    </div>
+                                    <div class="tag">
+                                        <p>IA Map</p>
+                                    </div>
+                                    <div class="tag">
+                                        <p>Prototype</p>
+                                    </div>
+                                    <div class="tag">
+                                        <p>Testing</p>
+                                    </div>
+                                    <div class="tag">
+                                        <p>POC</p>
+                                    </div>
+                                    <div class="tag">
+                                        <p>Branding</p>
+                                    </div>
+                                    <div class="tag">
+                                        <p>User-frendly</p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="right p-intro col-split">
-                            <a href="">
-                                <div class="card-header">
-                                    <div class="card-link-heading">
-                                        <h3>Ketogether</h3>
-                                        <p>A platform for ketogenic diet users to share, to explore and to stick to the
-                                            diet!</p>
+                            <div class="card_link_img">
+                                <img class="card_link_img_2-1" src="assets/img/ketogether/keto-2.png" alt="keto1">
+                                <img class="card_link_img_2-2" src="assets/img/ketogether/keto-1.png" alt="keto2"
+                                    data-aso=offset="300" data-aos="move-image" data-aos-easing="ease-in-out-cubic"
+                                    data-aos-mirror="true" data-aos-duration="500">
+                            </div>
+                        </a>
+                        <a class="card cta aplus" href="aplus.html">
+                            <div class="card-up">
+                                <div class="card-link-heading">
+                                    <h3 class="clh">a+ Online Education</h3>
+                                    <p class="clp">An online education system with experienced and qualified teachers,
+                                        supportive guidance counselors, and a state-certified curriculum provides the
+                                        flexibility these students need to get back on track and prepare for college and
+                                        life after graduation.</p>
+                                </div>
+                                <div class="tags">
+                                    <div class="tag">
+                                        <p>Research</p>
                                     </div>
-                                    <div class="tags">
-                                        <div class="tag">
-                                            <p>Research</p>
-                                        </div>
+                                    <div class="tag">
+                                        <p>Wireframe</p>
                                     </div>
-                                    <div class="tags">
-                                        <div class="tag">
-                                            <p>Analysis</p>
-                                        </div>
+                                    <div class="tag">
+                                        <p>IA Map</p>
                                     </div>
-                                    <div class="tags">
-                                        <div class="tag">
-                                            <p>Wireframe</p>
-                                        </div>
+                                    <div class="tag">
+                                        <p>Prototype</p>
                                     </div>
-                                    <div class="tags">
-                                        <div class="tag">
-                                            <p>IA Map</p>
-                                        </div>
+                                    <div class="tag">
+                                        <p>Testing</p>
                                     </div>
-                                    <div class="tags">
-                                        <div class="tag">
-                                            <p>Prototype</p>
-                                        </div>
+                                    <div class="tag">
+                                        <p>Branding</p>
                                     </div>
-                                    <div class="tags">
-                                        <div class="tag">
-                                            <p>Testing</p>
-                                        </div>
-                                    </div>
-                                    <div class="tags">
-                                        <div class="tag">
-                                            <p>POC</p>
-                                        </div>
-                                    </div>
-                                    <div class="tags">
-                                        <div class="tag">
-                                            <p>Branding</p>
-                                        </div>
-                                    </div>
-                                    <div class="tags">
-                                        <div class="tag">
-                                            <p>User-frendly</p>
-                                        </div>
+                                    <div class="tag">
+                                        <p>User-frendly</p>
                                     </div>
                                 </div>
-                                <div class="card-link-img">
-                                    <img src="" alt="">
-                                    <img src="" alt="">
-                                </div>
-                            </a>
-                        </div>
+                            </div>
+                            <div class="card_link_img">
+                                <img class="card_link_img_2-1" src="assets/img/aplus/aplus-1.png" alt="aplus1">
+                                <img class="card_link_img_2-2" src="assets/img/aplus/aplus-2.png" alt="aplus2"
+                                    data-aso=offset="300" data-aos="move-image" data-aos-easing="ease-in-out-cubic"
+                                    data-aos-mirror="true" data-aos-duration="500">
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
+    </div>
 
-        </section>
+    </section>
 
-        <!-- contact -->
-        <section id="contact"></section>
+    <!-- contact -->
+    <section id="contact"></section>
     </div>
 
 
-
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
