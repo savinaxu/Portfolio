@@ -19,6 +19,7 @@ body {
 
 /* header */
 #header {
+    z-index: 999;
     position: fixed;
     width: 100%;
     font-family: 'Raleway', sans-serif;
@@ -88,6 +89,9 @@ body {
 }
 
 #main {
+    background: white;
+    width: 100vw;
+    height: 100vh;
     opacity: 0;
     padding-top: 12rem;
     transition: opacity .3s ease;
@@ -333,6 +337,10 @@ body {
     bottom: 0;
     right: 0;
     padding-right: 2.5rem;
+    transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -webkit-transition: all .5s ease;
 }
 
 .chevron {
@@ -412,4 +420,184 @@ body {
     to {
         opacity: 1;
     }
+}
+
+/* projects */
+
+.section {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    height: 100vh;
+    min-height: 600px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.hero {
+    display: flex;
+    width: 100%;
+    height: 60vh;
+    min-height: 500px;
+    padding-right: 60px;
+    padding-left: 60px;
+    clear: none;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: baseline;
+    -webkit-align-items: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+    border-radius: 2px;
+}
+
+.section.browser {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+}
+
+.section.browser {
+    height: 100%;
+    padding-bottom: 0;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.section_split.browser.hero {
+    min-height: 100vh;
+    padding-right: 40px;
+    padding-left: 40px;
+    border-radius: 0;
+}
+
+.s-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 80px 0 0;
+    padding-top: 60px;
+}
+
+.row-split {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    -webkit-box-orient: horizontal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    -webkit-transition: opacity .2s ease;
+    transition: opacity .2s ease;
+}
+
+.row-split.lg {
+    min-height: 600px;
+}
+
+.row-split.lg.roles {
+    position: relative;
+    top: 0;
+    min-height: auto;
+    padding-right: 40px;
+    padding-bottom: 60px;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    padding-left: 40px;
+}
+
+.col-split {
+    display: flex;
+    height: 100%;
+    padding: 40px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 auto;
+    -ms-flex: 0 auto;
+    flex: 0 auto;
+}
+
+.col-split.roles {
+    min-height: 500px;
+    padding-left: 0;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+.col-split.padding {
+    padding-left: 40px;
+}
+
+.col-split.roles.padding {
+    min-height: 350px;
+    padding: 100px 41px 0 0;
+}
+
+.col-split.padding.left {
+    padding-right: 0;
+    padding-left: 0;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 auto;
+    -ms-flex: 0 auto;
+    flex: 0 auto;
+}
+
+
+.col-split.roles.padding.left {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 140px;
+    padding-top: 0;
+    padding-right: 60px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
 }

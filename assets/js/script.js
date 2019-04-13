@@ -77,8 +77,10 @@ $(function() {
         }
     }, 5000)
 
-    // projects
-    let controller = new ScrollMagic.Controller();
+    $(window).scroll(function () {
+        $(this).scrollTop() > 120 ? $("#down").css("opacity", "0") :  $("#down").css("opacity", "1") 
+    })
+    
 
     
 
