@@ -182,6 +182,10 @@ header {
     margin-bottom: 2mm;
 }
 
+.flickity-page-dots {
+    display: none;
+}
+
 #menu a:hover {
     border-bottom: 2px solid #434E6F !important;
 }
@@ -190,7 +194,7 @@ header {
 #project-snapshot {
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 .video{
@@ -204,8 +208,8 @@ header {
 .video iframe{
     left:0;
     top:0;
-    /* height: auto; */
-    width: 80%;
+    height: 100%;
+    width: 100%;
     position:absolute;
 }
 
@@ -322,7 +326,8 @@ header {
 }
 
 #main-content div img {
-    margin: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     width: 80%;
 }
 
@@ -396,6 +401,15 @@ header {
     color: white !important;
 }
 
+.link a {
+    text-decoration: none;
+}
+
+.link:hover {
+    cursor: pointer;
+}
+
+
 /* ketogether */
 
 #ketogether {
@@ -403,9 +417,13 @@ header {
     color: #382C40;
 }
 
-#ketogether #project-snapshot {
-    background-image: url("../img/ketogether/hero2.png");
+#project-snapshot > img {
+    width: 100%;
 }
+
+/* #ketogether #project-snapshot {
+    background-image: url("../img/ketogether/bg.png");
+} */
 
 #ketogether i {
     color: #FF7200;
@@ -423,18 +441,6 @@ header {
 
 #project-content .eyebrow {
     color: #FF7200
-}
-
-#ketogether #project-snapshot .col-3 {
-    float: right;
-    margin-right: 10%;
-
-}
-
-#ketogether #project-snapshot .title {
-    font-size: 50px;
-    font-weight: 500;
-    margin-bottom: 0 !important;
 }
 
 #ketogether .task-flow div {
@@ -462,20 +468,14 @@ header {
 
 }
 
-@media screen and (max-width: 1000px) {
-    #ketogether #project-snapshot .col-3 {
-        display: none;
-    }
+@media screen and (max-width: 991px) {
+    /* #ketogether #project-snapshot {
+        height: auto;
+    } */
+
 }
 
 /* aplus */
-#aplus #project-snapshot {
-    background-image: url("../img/aplus/hero.png")
-}
-
-#aplus #project-snapshot .container-content {
-    padding-top: 200px;
-}
 
 #aplus .row .col-3 {
     padding-top: 10px;
@@ -486,25 +486,8 @@ header {
     background: linear-gradient(to right, rgba(255, 0, 102, 1) 0%, rgba(255, 0, 102, 0.64) 100%);
 }
 
-#aplus #project-snapshot .title {
-    font-size: 50px;
-    font-weight: 500;
-    line-height: 1.2;
-    margin-bottom: 20px;
-    margin-top: 10px;
-}
-
 #aplus .eyebrow {
     color: #ff0066;
-}
-
-#aplus #project-snapshot .eyebrow {
-    color: white;
-    padding-top: 10px;
-}
-
-#aplus .intro-text {
-    font-size: 20px;
 }
 
 #aplus .button-link {
@@ -536,22 +519,84 @@ header {
     color: #DA3743;
 }
 
-#redesignot #project-snapshot {
-    background-image: url(../img/opentable/ot-1.png)
-}
-
-#gif #project-snapshot {
-    background-image: url(../img/gif/gif-1.png)
-}
-
 #gif .eyebrow {
     color: #6B319D;
 }
 
-#onlineshopping #project-snapshot {
-    background-image: url(../img/onlineshopping/onlineshopping.png);
-}
-
 #onlineshopping .eyebrow {
     color: #E50E47;
+}
+
+#travelmate #project-snapshot {
+    background-image: url(../)
+}
+
+#travelmate .eyebrow {
+    color: #AA967E;
+}
+
+@media (max-width: 767px) {
+    #main-content {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    #project-content {
+        width: 90%;
+        display: block;
+    }
+
+    #project-snapshot {
+        margin-top: 80px;
+    }
+
+    #meta {
+        margin-bottom: 50px;
+        display: flex;
+        border-bottom: 1px solid;
+    }
+
+    #meta div {
+        margin-bottom: 20px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-right: 10px;
+    }
+
+    #main-content div img {
+        width: 90%;
+    }
+
+    .task-flow {
+        flex-wrap: wrap;
+    }
+
+    .kp {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 479px) {
+    #main-content {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #main-content div h1 {
+        font-size: 15px;
+    }
+
+    #meta {
+        flex-wrap: wrap;
+    }
+
+    #project-content {
+        width: 100%;
+        margin-top: 20px;
+        font-size: 14px;
+    }
+
+    #main-content div img {
+        width: 100%;
+    }
 }

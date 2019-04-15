@@ -1,14 +1,7 @@
 $(function() {
  // Opening
-    $("#fadeIn").css("opacity", "1")
-
     setTimeout(() => {
-        $("#fadeIn").css("opacity", "0")
-    }, 1000)
-    setTimeout(() => {
-        $("#fadeIn").css("display", "none")
         $("#header").css("opacity", "1")
-        
     }, 1500)
     setTimeout(() => {
         $("#main").css("opacity", "1")
