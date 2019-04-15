@@ -193,6 +193,22 @@ header {
     height: 100vh;
 }
 
+.video{
+    margin-bottom: 20px;
+    margin-top: 50px;
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.video iframe{
+    left:0;
+    top:0;
+    /* height: auto; */
+    width: 80%;
+    position:absolute;
+}
+
 .np-container {
     max-width: 1160px;
     margin: 0 auto;
@@ -514,4 +530,28 @@ header {
 #aplus ol a {
     color: black;
     text-decoration: none;
+}
+
+#redesignot .eyebrow {
+    color: #DA3743;
+}
+
+#redesignot #project-snapshot {
+    background-image: url(../img/opentable/ot-1.png)
+}
+
+#gif #project-snapshot {
+    background-image: url(../img/gif/gif-1.png)
+}
+
+#gif .eyebrow {
+    color: #6B319D;
+}
+
+#onlineshopping #project-snapshot {
+    background-image: url(../img/onlineshopping/onlineshopping.png);
+}
+
+#onlineshopping .eyebrow {
+    color: #E50E47;
 }

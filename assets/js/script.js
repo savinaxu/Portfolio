@@ -78,7 +78,6 @@ $(function() {
 
 
     $(window).scroll(function () {
-        $(window).width() < 995 ? ($(".desktop").css("opacity", "0"), $(".tablet").css("opacity", "1")) : ($(".desktop").css("opacity", "1"), $(".tablet").css("opacity", "0"))
         $(this).scrollTop() > 120 ? $("#down").css("opacity", "0") : $("#down").css("opacity", "1")
     })
 
@@ -133,26 +132,53 @@ $(function() {
     const projects = d3.select("#projects")
     let scrolly = projects.selectAll(".scrolly")
     let left = scrolly.select(".left")
-    console.log(scrolly, typeof scrolly, left, typeof left)
-    // let right = scrolly.select(".right")
-    // let step = right.selectAll(".step")
+    let right = scrolly.select(".right")
+    let step = right.selectAll(".step")
 
-    // const scroller = scrollama();
+    console.log(step)
 
-    // // setup the instance, pass callback functions
-    // scroller
-    // .setup({
-    //     step: '.step'
-    // })
-    // .onStepEnter(response => {
-    //     // { element, index, direction }
-    // })
-    // .onStepExit(response => {
-    //     // { element, index, direction }
-    // });
+    const scroller = scrollama();
 
-    // // setup resize event
-    // window.addEventListener('resize', scroller.resize);
+    function handleResize() {
+        let leftH = left.clientHeight,
+            leftTop = (window.innerHeight - leftH) / 3
+
+        left.style('top', leftTop + 'px')
+        scroller.resize()
+    }
+
+    function handleStepEnter (response) {
+
+
+    }
+
+    function handleStepProgress(response) {
+        let el = d3.select(response.element)
+
+    }
+
+    function init() {
+        setupStickyfill();
+
+        // 1. force a resize on load to ensure proper dimensions are sent to scrollama
+        handleResize();
+
+        // 2. setup the scroller passing options
+        // 		this will also initialize trigger observations
+        // 3. bind scrollama event handlers (this can be chained like below)
+        scroller.setup({
+            step: '#scrolly article .step',
+            offset: 0.33,
+            debug: true,
+        })
+            .onStepEnter(handleStepEnter)
+
+
+        // setup resize event
+        window.addEventListener('resize', handleResize);
+    }
+
+    init();
 
 
 

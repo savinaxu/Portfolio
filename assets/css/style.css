@@ -62,6 +62,16 @@ header {
     transition: transform .5s ease, opacity .5s ease;
 }
 
+.tablet {
+    display: none;
+}
+
+.github {
+    text-decoration: none;
+    color: greenyellow;
+    font-weight: bold;
+}
+
 #logo {
     display: flex;
     -ms-flex-direction: column;
@@ -445,7 +455,7 @@ header {
     -moz-transition: all .2s ease-in;
     -webkit-transition: all .2s ease-in;
     transition-delay: .2s;
-    align-self: flex-end;
+    align-self: center;
 }
 
 .box__item {
@@ -707,7 +717,7 @@ header {
     flex-direction: column;
 }
 
-.section_split.browser.hero {
+.section.browser.hero {
     min-height: 100vh;
     padding-right: 40px;
     padding-left: 40px;
@@ -1068,7 +1078,9 @@ header {
 
 /* onlineshopping */
 .card.cta.onlineshopping {
-    background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+    background-image: linear-gradient(180deg,#ffecd2,rgba(230, 196, 127, 0.25)),url(../img/onlineshopping/bg.png);
+    background-position: 50% 100%;
+    /* background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%); */
 }
 
 .onlineshopping .red {
@@ -1090,4 +1102,359 @@ header {
 .card.cta.travelmate {
     background-image: linear-gradient(180deg,rgba(5,4,16,.5),hsla(225.51724137931038,66.54%,4.4%,.75)),url(../img/travelmate/bg.png);
     background-position: 0 0,50% 100%;
+}
+
+@media (max-width: 991px) {
+
+    .tablet {
+        display: inline-block;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .section.browser {
+        padding-top: 100px;
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .s-container {
+        padding-right: 80px;
+        padding-left: 80px;
+    }
+
+    .col-split {
+        padding: 80px 20px 80px 0;
+        -webkit-box-pack: start;
+        -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+        justify-content: flex-start
+    }
+
+    .col-split.roles {
+        height: auto;
+        padding: 25px 0;
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 auto;
+        -ms-flex: 0 auto;
+        flex: 0 auto
+    }
+
+    .col-split.roles.last {
+        padding-bottom: 75px
+    }
+
+    .col-split.roles.last.padding {
+        padding-right: 0;
+        padding-bottom: 75px;
+        padding-left: 0
+    }
+
+    .col-split.roles.padding {
+        min-height: 0;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center
+    }
+
+    .col-split.roles.padding.left {
+        position: relative !important;
+        top: 0;
+        -webkit-box-pack: start;
+        -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        -webkit-box-align: start;
+        -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+        align-items: flex-start
+    }
+
+    .col-split.padding {
+        padding-right: 60px;
+        padding-left: 60px
+    }
+
+    .col-split.padding.left {
+        -webkit-box-pack: start;
+        -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+        justify-content: flex-start
+    }
+
+    .intro-right {
+        align-self: center;
+    }
+
+    .section.browser.hero {
+        padding-top: 100px;
+        padding-right: 0;
+        padding-left: 0
+    }
+
+    .row-split {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 auto;
+        -ms-flex: 0 auto;
+        flex: 0 auto
+    }
+
+    .row-split.lg.roles {
+        padding-right: 80px;
+        padding-left: 80px;
+        padding-bottom: 0;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column
+    }
+
+    .col-split.roles.last.padding.vertical {
+        width: 100%;
+    }
+}
+
+@media (max-width: 850px) {
+    .intro-right {
+            display: none;
+        }
+}
+
+
+@media (max-width: 767px) {
+    .hero {
+        padding: 30px
+    }
+
+    .s-container {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .col-split {
+        padding: 60px 30px;
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 auto;
+        -ms-flex: 0 auto;
+        flex: 0 auto;
+        border-top: 1px none hsla(0,0%,100%,.25)
+    }
+
+    .col-split.roles {
+        padding: 30px
+    }
+
+    .col-split.roles.last.padding {
+        padding: 30px 0
+    }
+
+    .col-split.roles.padding {
+        margin-top: 0;
+        padding-bottom: 30px
+    }
+
+    .col-split.padding {
+        padding-right: 30px;
+        padding-left: 30px
+    }
+
+    .clp {
+        font-size: 24px;
+    }
+
+    .card.cta {
+        margin-bottom: 40px;
+    }
+
+    .section {
+        height: auto;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between
+    }
+
+    .row-split {
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1
+    }
+
+    .row-split.lg.roles {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+
+    .nav_overlay {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+
+    .nav-open-img {
+        width: 30px;
+    }
+
+    .nav-overlay-container li {
+        margin-bottom: 10px;
+    }
+
+    .nav-overlay-container a.last {
+        margin-bottom: 20px;
+    }
+
+    header {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    #header {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+
+    #menu {
+        right: 10px;
+        padding: 0 30px;
+        -webkit-box-pack: end;
+        -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+    }
+}
+
+@media (max-width: 479px) {
+    .section.browser.hero {
+        padding-top: 80px;
+        -webkit-box-pack: start;
+        -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+    }
+
+    .hero {
+        height: 493px;
+    }
+
+    .s-container {
+        padding: 0;
+    }
+
+    .row-split.lg.roles {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .col-split {
+        padding: 60px 30px 60px 0;
+    }
+
+    .left-container {
+        width: 100%;
+    }
+
+    .col-split.roles.last.padding {
+        padding-top: 30px;
+    }
+
+    .col-split.roles.padding {
+        padding-top: 60px;
+        padding-right: 0;
+    }
+
+    .col-split.roles.padding.left {
+        padding-right: 0;
+        padding-bottom: 20px;
+        padding-left: 0;
+        width: 100%;
+    }
+
+    .col-split.padding {
+        padding: 60px 30px;
+    }
+
+    .nav-open-img {
+        width: 100%;
+    }
+
+    .nav-open-close {
+        position: relative;
+        width: 25px;
+        height: 25px;
+    }
+
+    .left-container h2 {
+        font-size: 34px;
+    }
+
+    .left-container p {
+        font-size: 20px;
+    }
+
+    .col-split.roles.last.padding.vertical {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .card.cta {
+        margin-bottom: 20px;
+    }
+
+    .card-up {
+        padding: 20px;
+    }
+
+    .clh {
+        font-size: 24px;
+    }
+
+    .clp {
+        font-size: 18px;
+    }
+
+    .tag {
+        background-color: hsla(0,0%,100%,.11);
+    }
+
+    .tag p {
+        padding: 4px 12px;
+        font-size: 12px;
+    }
+
+    header {
+        height: 80px;
+    }
+
+    #logo {
+        height: 80px;
+        left: 20px;
+    }
+
+    #menu {
+        right: 0;
+        height: 80px;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
 }
