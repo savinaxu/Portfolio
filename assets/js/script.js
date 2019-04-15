@@ -1,6 +1,5 @@
 $(function() {
-
-    // Opening
+ // Opening
     $("#fadeIn").css("opacity", "1")
 
     setTimeout(() => {
@@ -84,19 +83,16 @@ $(function() {
     })
 
     //menu
-    let menuIsOpen = false
-    $('#menu').on('click', function(){
-        menuIsOpen ? 
-        ($(".nav-open-img").css("opacity", "1"),
-        $(".nav-close-img").css("opacity", "0"),
-        $(".nav-overlay").css({"opacity": "0", "display": "none", "transform": "translate3d(0px, 90%, 0px)"}),
-        menuIsOpen = false) : 
-        ($(".nav-open-img").css("opacity", "0"),
-        $(".nav-close-img").css({"opacity": "1", "z-index": "999"}),
-        $(".nav-overlay").css({"opacity": "1", "display": "flex", "transform": "translate3d(0px, 100%, 0px)","transform-style": "preserve-3d"}),
-        menuIsOpen = true)
 
-    });
+    const handleClickMenu = () => {
+        $(".nav-overlay").toggleClass("nav-overlay-active")
+        $(".nav-open-img").toggleClass("nav-open-img-deactive")
+        $(".nav-close-img").toggleClass("nav-close-img-active")
+    }
+    $('#menu').on('click', handleClickMenu);
+    $(".nav-overlay-container li").each(function() {
+        $(this).on("click", handleClickMenu)
+    })
 
     //header
     let didScroll,
@@ -132,6 +128,32 @@ $(function() {
         
         lastScrollTop = st;
     }
+
+    //sticky
+    const projects = d3.select("#projects")
+    let scrolly = projects.selectAll(".scrolly")
+    let left = scrolly.select(".left")
+    console.log(scrolly, typeof scrolly, left, typeof left)
+    // let right = scrolly.select(".right")
+    // let step = right.selectAll(".step")
+
+    // const scroller = scrollama();
+
+    // // setup the instance, pass callback functions
+    // scroller
+    // .setup({
+    //     step: '.step'
+    // })
+    // .onStepEnter(response => {
+    //     // { element, index, direction }
+    // })
+    // .onStepExit(response => {
+    //     // { element, index, direction }
+    // });
+
+    // // setup resize event
+    // window.addEventListener('resize', scroller.resize);
+
 
 
 

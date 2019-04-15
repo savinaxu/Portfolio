@@ -125,9 +125,8 @@ header {
     background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0, rgba(255, 255, 255, 0) 100%);
 }
 
-.head-bg {
-    background: white;
-    transition: 0.3s all;
+.nav-up {
+    top: -80px;
 }
 
 .head-wrapper {
@@ -359,44 +358,16 @@ header {
 }
 
 #next-project {
-    text-align: center;
-    background: #F7F5F2;
-    margin: 0 auto;
-    padding: 0;
-    clear: both;
-}
-
-.project-card {
-    border: none;
-    background: white;
-    float: left;
-    margin: 30px 0 30px 0;
-    text-align: left;
-}
-
-.np-img {
-    display: block;
-    width: 50%;
-    float: left;
-}
-
-.np-intro {
-    padding: 60px;
-    vertical-align: middle;
-    float: left;
-}
-
-.np-footer {
-    border-top: 1px solid #EBECEE;
-    padding-top: 15px;
-    padding-bottom: 20px;
-    margin-top: 20px;
+    font-size: 62.5%;
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
 }
 
 .scrollTop {
     position: fixed;
     z-index: 3;
-    right: 10%;
+    right: 3%;
     bottom: 10px;
     background-color: #E50E47;
     padding: 10px 15px;
@@ -494,9 +465,9 @@ header {
     padding-top: 10px;
     margin-left: 8%;
     color: white;
-    background: -moz-linear-gradient(left, rgba(255,0,102,1) 0%, rgba(255,0,102,0.64) 100%);
-    background:  -webkit-linear-gradient(left, rgba(255,0,102,1) 0%, rgba(255,0,102,0.64) 100%);
-    background: linear-gradient(to right, rgba(255,0,102,1) 0%, rgba(255,0,102,0.64) 100%);
+    background: -moz-linear-gradient(left, rgba(255, 0, 102, 1) 0%, rgba(255, 0, 102, 0.64) 100%);
+    background: -webkit-linear-gradient(left, rgba(255, 0, 102, 1) 0%, rgba(255, 0, 102, 0.64) 100%);
+    background: linear-gradient(to right, rgba(255, 0, 102, 1) 0%, rgba(255, 0, 102, 0.64) 100%);
 }
 
 #aplus #project-snapshot .title {
@@ -534,4 +505,13 @@ header {
     background: white;
     cursor: hand;
     color: #ff0066;
+}
+
+#aplus #main-content img {
+    width: 100%;
+}
+
+#aplus ol a {
+    color: black;
+    text-decoration: none;
 }
