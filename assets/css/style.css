@@ -309,7 +309,6 @@ header {
     font-weight: 400;
 }
 
-
 .nav-up {
     top: -150px;
 }
@@ -342,7 +341,8 @@ header {
     max-width: 70%;
 }
 
-.intro-left h1 {
+.intro-left h1,
+.contact-container h1 {
     line-height: 120%;
     padding-bottom: 0;
     font-weight: 900;
@@ -432,6 +432,7 @@ header {
 
 .more:hover,
 .more:focus {
+    cursor: pointer;
     background: #E50E47;
     box-shadow: inset 6.5em 0 0 0 #E50E47;
     transition: all .5s ease;
@@ -445,6 +446,18 @@ header {
     text-transform: uppercase;
     font-weight: bold;
     font-size: 12px;
+    font-family: 'Raleway', sans-serif;
+}
+
+#contact p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.resumelink {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px !important;
     font-family: 'Raleway', sans-serif;
 }
 
@@ -1458,3 +1471,109 @@ header {
     }
 
 }
+
+/* about */
+.skills {
+    display: flex;
+}
+
+#about {
+    margin-top: 100px;
+    width: 100%;
+    padding-bottom: 6rem;
+    padding-left: 3.5rem;
+    display: none;
+}
+
+.skill {
+    width: 25%;
+    margin-bottom: 6rem;
+    padding-right: 3rem;
+}
+
+.skill img {
+    height: 50px;
+}
+
+.autoHeight {
+    height: auto !important;
+}
+
+.skill h3,
+.me h3 {
+    font-size: 30px;
+    margin: 2.5rem 0 -.9rem;
+    line-height: 120%;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+}
+
+.skill p,
+.me p {
+    margin-top: 2.1rem;
+    margin-bottom: 3rem;
+    font-size: 20px;
+    white-space: normal;
+    line-height: 1.5;
+    font-weight: 100;
+}
+
+.me {
+    width: 60%;
+}
+
+.footer {
+    width: 100%;
+    padding: 25px 0;
+}
+
+.footer-left {
+    float: left;
+    padding-left: 50px;
+    padding-bottom: 25px;
+}
+
+.footer-right {
+    float: right;
+    padding-right: 50px;
+    padding-bottom: 25px;
+}
+
+.footer-left p,
+.footer-right p {
+    margin-bottom: 1px;
+    font-size: 13px; 
+}
+
+.footer a {
+    text-decoration: none;
+    color: #434E6F
+}
+
+.footer-red {
+    color: #f03d69
+}
+
+.social a {
+    margin-right: 20px;
+}
+
+
+.clearfix {
+    clear: both;
+}
+
+.content-container {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #434E6F;
+
+}
+#contact {
+    margin-top: 20px;
+    padding: 20px 15px;
+    float: right;
+}
+
+
+
+

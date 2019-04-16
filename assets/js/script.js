@@ -48,6 +48,8 @@ $(function() {
         }
     }).reveal()
 
+    
+
     setTimeout(() => {
         $(".introduction").css("opacity", "1")
         $(".intro-right").css("opacity", "1")
@@ -76,7 +78,7 @@ $(function() {
 
     //menu
 
-    const handleClickMenu = () => {
+    const handleClickMenu = (el) => {
         $(".nav-overlay").toggleClass("nav-overlay-active")
         $(".nav-open-img").toggleClass("nav-open-img-deactive")
         $(".nav-close-img").toggleClass("nav-close-img-active")
@@ -128,8 +130,6 @@ $(function() {
     let right = scrolly.select(".right")
     let step = right.selectAll(".step")
 
-    console.log(step)
-
     const scroller = scrollama();
 
     function handleResize() {
@@ -140,15 +140,13 @@ $(function() {
         scroller.resize()
     }
 
-    function handleStepEnter (response) {
-
-
+    function setupStickyfill() {
+        d3.selectAll('.sticky').each(function () {
+            Stickyfill.add(this);
+        });
     }
 
-    function handleStepProgress(response) {
-        let el = d3.select(response.element)
-
-    }
+    
 
     function init() {
         setupStickyfill();
@@ -160,18 +158,52 @@ $(function() {
         // 		this will also initialize trigger observations
         // 3. bind scrollama event handlers (this can be chained like below)
         scroller.setup({
-            step: '#scrolly article .step',
-            offset: 0.33,
-            debug: true,
+            step: '#projects .scrolly .right .step',
+            offset: 1,
+            threshold: 1,
         })
-            .onStepEnter(handleStepEnter)
-
 
         // setup resize event
         window.addEventListener('resize', handleResize);
     }
 
     init();
+
+    //switch
+    $(".more").on("click", function() {
+        $("#about").toggle(() => {
+            $("#about").is(":visible") ? $(".more-text").text("Close") : $(".more-text").text("Know More")
+        })
+        $("#main").toggleClass("autoHeight")
+    })
+
+    //contact
+
+    // const waypoints = $('#contact').waypoint({
+        
+    //     handler: function() {
+    //         console.log("hahah")
+    //         new RevealFx(document.querySelector(".rev-5"), {
+    //             revealSettings: {
+    //                 bgcolor: "#434E6F",
+    //                 delay: 500,
+    //                 onCover: function (t, e) {
+    //                     t.style.opacity = 1
+    //                 }
+    //             }
+    //         }).reveal()
+        
+    //         new RevealFx(document.querySelector(".rev-6"), {
+    //             revealSettings: {
+    //                 bgcolor: "#434E6F",
+    //                 delay: 1000,
+    //                 onCover: function (t, e) {
+    //                     t.style.opacity = 1
+    //                 }
+    //             }
+    //         }).reveal()
+    //     }
+    // })
 
 
 
