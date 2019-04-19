@@ -19,6 +19,67 @@ body {
     clear: both;
 }
 
+.footer {
+    width: 100%;
+    padding: 25px 0;
+    border-top: 1px solid #434E6F;
+}
+
+.footer-left {
+    display:flex;
+    align-items: center;
+    float: left;
+    padding-left: 50px;
+    padding-bottom: 25px;
+}
+
+.footer-right {
+    float: right;
+    padding-right: 50px;
+    padding-bottom: 25px;
+}
+
+.footer-left p,
+.footer-right p {
+    margin-bottom: 1px;
+    font-size: 13px; 
+}
+
+.footer a {
+    text-decoration: none;
+    color: #434E6F
+}
+
+
+
+.footer-logo img{
+    margin-right: 50px;
+    height: 30px;
+    border: 0;
+    max-width: 100%;
+    vertical-align: middle;
+    transition: opacity .3s ease;
+    -o-transition: opacity .3s ease;
+    -moz-transition: opacity .3s ease;
+    -webkit-transition: opacity .3s ease;
+}
+
+.social a {
+    margin-right: 20px;
+}
+
+.footer-left i {
+    color: #434E6F !important;
+}
+.footer-red {
+    color: #f03d69 !important;
+}
+
+
+.clearfix {
+    clear: both;
+}
+
 @media screen and (max-width: 1250px) {
     .row {
         margin-left: -10%;
@@ -168,12 +229,46 @@ header {
     font-family: 'Raleway', sans-serif;
 }
 
-#menu a {
+#menu li {
     margin-left: 1rem;
     color: #434E6F;
     border-bottom: 2px solid transparent;
     display: inline-block;
     cursor: pointer;
+    float: left;
+    position: relative;
+}
+
+#menu li a {
+    color: #434E6F;
+    text-decoration: none;
+}
+
+#link_projects ul {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    transition: all 0.5 ease;
+    left: 0;
+    display: none;
+    background: white;
+    padding: 10px;
+    width: 300%;
+}
+
+.dropdown li {
+    font-size: 15px;
+    margin: 0;
+    font-weight: 300;
+}
+
+#link_projects:hover > ul,
+#link_projects:focus-within > ul,
+#link_projects ul:hover,
+#link_projects ul:focus {
+  visibility: visible;
+  opacity: 1;
+  display: block
 }
 
 #link_contact img {
@@ -186,7 +281,7 @@ header {
     display: none;
 }
 
-#menu a:hover {
+#menu li:hover {
     border-bottom: 2px solid #434E6F !important;
 }
 
@@ -573,6 +668,18 @@ header {
 
     .kp {
         margin-top: 10px;
+    }
+
+    .footer-left,
+    .footer-right {
+        float: none !important;
+        padding: 0 0 10px 0 !important;
+    }
+
+    .footer {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
     }
 }
 
