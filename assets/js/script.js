@@ -58,6 +58,7 @@ $(function() {
     setTimeout(() => {
         $("#menu").css("opacity", "1")
         $("#down").css("opacity", "1")
+        $(".contact-container").css("opacity", "1")
     }, 3500)
 
     //set photo slider
